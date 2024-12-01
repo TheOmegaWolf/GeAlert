@@ -1,25 +1,42 @@
 {
   "expo": {
-    "name": "ge-alert",
-    "slug": "ge-alert",
+        
+    "name": "MySecurityApp",
+    "slug": "MySecurityApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/ge-logo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "permissions": [
+      "CAMERA",
+      "LOCATION",
+      "CALL_PHONE"
+    ],
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/ge-logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yourusername.myscurityapp",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -27,7 +44,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/ge-logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -36,6 +53,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "56a390ef-ba14-4d4e-8352-8e8019a0ce37"
+      }
     }
   }
 }
